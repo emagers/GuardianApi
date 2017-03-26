@@ -2,12 +2,12 @@
 {
     public class MapTypeData
     {
-        public string originalUrl { get; set; }
-        public string source { get; set; }
-        public string title { get; set; }
-        public string description { get; set; }
-        public float width { get; set; }
-        public float height { get; set; }
-        public string html { get; set; }
+        public string OriginalUrl { get; set; }
+        public string Source { get; set; }
+        public string Title { get; set; }
+        public string Description { get; set; }
+        public float? Width { get; set; }
+        public float? Height { get; set; }
+        public string Html { get; set; }
     }
 }

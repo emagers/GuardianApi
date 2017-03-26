@@ -4,7 +4,7 @@ namespace GuardianApi.Models.Responses
 {
     public class EditionResponse : BaseResponse
     {
-        public List<Edition> results { get; set; }
+        public List<Edition> Results { get; set; }
     }
 }
 

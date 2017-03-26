@@ -5,23 +5,23 @@ namespace GuardianApi.Models
     public class Tag
     {
         public string id { get; set; }
-        public string type { get; set; }
-        public string webTitle { get; set; }
-        public string webUrl { get; set; }
-        public string apiUrl { get; set; }
-        public List<Reference> references { get; set; }
-        public string sectionId { get; set; }
-        public string sectionName { get; set; }
-        public string bio { get; set; }
-        public string bylineImageUrl { get; set; }
-        public string firstName { get; set; }
-        public string lastName { get; set; }
-        public string description { get; set; }
-        public string byLineLargeImageUrl { get; set; }
-        public string twitterHandle { get; set; }
-        public List<ActiveSponsorship> activeSponsorships { get; set; }
-        public string paidContentType { get; set; }
-        public string emailAddress { get; set; }
-        public Podcast podcast { get; set; }
+        public string Type { get; set; }
+        public string WebTitle { get; set; }
+        public string WebUrl { get; set; }
+        public string ApiUrl { get; set; }
+        public List<Reference> References { get; set; }
+        public string SectionId { get; set; }
+        public string SectionName { get; set; }
+        public string Bio { get; set; }
+        public string BylineImageUrl { get; set; }
+        public string FirstName { get; set; }
+        public string LastName { get; set; }
+        public string Description { get; set; }
+        public string ByLineLargeImageUrl { get; set; }
+        public string TwitterHandle { get; set; }
+        public List<ActiveSponsorship> ActiveSponsorships { get; set; }
+        public string PaidContentType { get; set; }
+        public string EmailAddress { get; set; }
+        public Podcast Podcast { get; set; }
     }
 }

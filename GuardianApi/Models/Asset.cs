@@ -2,9 +2,9 @@
 {
     public class Asset
     {
-        public string type { get; set; }
-        public string mimeType { get; set; }
-        public string file { get; set; }
-        public TypeData typeData { get; set; }
+        public string Type { get; set; }
+        public string MimeType { get; set; }
+        public string File { get; set; }
+        public TypeData TypeData { get; set; }
     }
 }

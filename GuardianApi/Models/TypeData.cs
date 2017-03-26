@@ -2,18 +2,18 @@
 {
     public class TypeData
     {
-        public string aspectRatio { get; set; }
-        public float width { get; set; }
-        public float height { get; set; }
-        public bool isMaster { get; set; }
-        public bool isInappropriateForAdverts { get; set; }
-        public bool embeddable { get; set; }
-        public string source { get; set; }
-        public string name { get; set; }
-        public string altText { get; set; }
-        public string caption { get; set; }
-        public string credit { get; set; }
-        public long sizeInBytes { get; set; }
-        public string photographer { get; set; }
+        public string AspectRatio { get; set; }
+        public float? Width { get; set; }
+        public float? Height { get; set; }
+        public bool? IsMaster { get; set; }
+        public bool? IsInappropriateForAdverts { get; set; }
+        public bool? Embeddable { get; set; }
+        public string Source { get; set; }
+        public string Name { get; set; }
+        public string AltText { get; set; }
+        public string Caption { get; set; }
+        public string Credit { get; set; }
+        public long? SizeInBytes { get; set; }
+        public string Photographer { get; set; }
     }
 }

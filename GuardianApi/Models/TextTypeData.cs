@@ -2,6 +2,6 @@
 {
     public class TextTypeData
     {
-        public string html { get; set; }
+        public string Html { get; set; }
     }
 }

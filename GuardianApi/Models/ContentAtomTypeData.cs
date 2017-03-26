@@ -2,7 +2,7 @@
 {
     public class ContentAtomTypeData
     {
-        public string atomId { get; set; }
-        public string atomType { get; set; }
+        public string AtomId { get; set; }
+        public string AtomType { get; set; }
     }
 }

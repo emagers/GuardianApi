@@ -2,8 +2,8 @@
 {
     public class TableTypeData
     {
-        public string originalUrl { get; set; }
-        public string source { get; set; }
-        public string html { get; set; }
+        public string OriginalUrl { get; set; }
+        public string Source { get; set; }
+        public string Html { get; set; }
     }
 }

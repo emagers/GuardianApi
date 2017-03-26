@@ -2,7 +2,7 @@
 {
     public class PollquoteTypeData
     {
-        public string html { get; set; }
-        public string attribution { get; set; }
+        public string Html { get; set; }
+        public string Attribution { get; set; }
     }
 }

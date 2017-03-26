@@ -1,11 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace GuardianApi.Models.Responses
+﻿namespace GuardianApi.Models.Responses
 {
     public class ContentResponse
     {
-        public Content content { get; set; }
+        public Content Content { get; set; }
     }
 }

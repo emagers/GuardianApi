@@ -2,9 +2,9 @@
 {
     public class PagedResponse : BaseResponse
     {
-        public int startIndex { get; set; }
-        public int pageSize { get; set; }
-        public int currentPage { get; set; }
-        public int pages { get; set; }
+        public int? StartIndex { get; set; }
+        public int? PageSize { get; set; }
+        public int? CurrentPage { get; set; }
+        public int? Pages { get; set; }
     }
 }

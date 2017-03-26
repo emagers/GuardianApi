@@ -5,19 +5,19 @@ namespace GuardianApi.Models
 {
     public class Content
     {
-        public string id { get; set; }
-        public string type { get; set; }
-        public string sectionId { get; set; }
-        public string sectionName { get; set; }
-        public DateTime webPublicationDate { get; set; }
-        public string webTitle { get; set; }
-        public string webUrl { get; set; }
-        public string apiUrl { get; set; }
-        public List<Tag> tags { get; set; }
-        public List<Reference> references { get; set; }
-        public Block blocks { get; set; }
-        public Right rights { get; set; }
-        public bool isHosted { get; set; }
-        public Section section { get; set; }
+        public string Id { get; set; }
+        public string Type { get; set; }
+        public string SectionId { get; set; }
+        public string SectionName { get; set; }
+        public DateTime WebPublicationDate { get; set; }
+        public string WebTitle { get; set; }
+        public string WebUrl { get; set; }
+        public string ApiUrl { get; set; }
+        public List<Tag> Tags { get; set; }
+        public List<Reference> References { get; set; }
+        public Block Blocks { get; set; }
+        public Right Rights { get; set; }
+        public bool? IsHosted { get; set; }
+        public Section Section { get; set; }
     }
 }

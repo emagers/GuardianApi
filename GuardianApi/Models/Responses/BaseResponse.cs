@@ -2,8 +2,8 @@
 {
     public class BaseResponse
     {
-        public string status { get; set; }
-        public string userTier { get; set; }
-        public int total { get; set; }
+        public string Status { get; set; }
+        public string UserTier { get; set; }
+        public int? Total { get; set; }
     }
 }

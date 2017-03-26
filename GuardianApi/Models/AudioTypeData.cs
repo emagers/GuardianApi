@@ -4,14 +4,13 @@ namespace GuardianApi.Models
 {
     public class AudioTypeData
     {
-        public string html { get; set; }
-        public string source { get; set; }
-        public string description { get; set; }
-        public string title { get; set; }
-        public string caption { get; set; }
-        public int durationMinutes { get; set; }
-        public int durationSeconds { get; set; }
-        [JsonProperty("explicit")]
-        public bool explicitContent { get; set; }
+        public string Html { get; set; }
+        public string Source { get; set; }
+        public string Description { get; set; }
+        public string Title { get; set; }
+        public string Caption { get; set; }
+        public int? DurationMinutes { get; set; }
+        public int? DurationSeconds { get; set; }
+        public bool? Explicit { get; set; }
     }
 }

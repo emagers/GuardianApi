@@ -1,13 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace GuardianApi.Models
+﻿namespace GuardianApi.Models
 {
     public class Right
     {
-        public bool syndicatable { get; set; }
-        public bool subscriptionDatabases { get; set; }
-        public bool developerCommunity { get; set; }
+        public bool? Syndicatable { get; set; }
+        public bool? SubscriptionDatabases { get; set; }
+        public bool? DeveloperCommunity { get; set; }
     }
 }

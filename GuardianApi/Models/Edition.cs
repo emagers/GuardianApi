@@ -1,13 +1,16 @@
-﻿namespace GuardianApi.Models
+﻿using Newtonsoft.Json;
+
+namespace GuardianApi.Models
 {
     public class Edition
     {
-        public string id { get; set; }
-        public string webTitle { get; set; }
-        public string webUrl { get; set; }
-        public string apiUrl { get; set; }
-        public string path { get; set; }
-        public string edition { get; set; }
-        public string code { get; set; }
+        public string Id { get; set; }
+        public string WebTitle { get; set; }
+        public string WebUrl { get; set; }
+        public string ApiUrl { get; set; }
+        public string Path { get; set; }
+        [JsonProperty("edition")]
+        public string Type { get; set; }
+        public string Code { get; set; }
     }
 }

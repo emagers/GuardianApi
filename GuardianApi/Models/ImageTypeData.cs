@@ -2,19 +2,19 @@
 {
     public class ImageTypeData
     {
-        public string caption { get; set; }
-        public string copyright { get; set; }
-        public string displayCredit { get; set; }
-        public string credit { get; set; }
-        public string source { get; set; }
-        public string photographer { get; set; }
-        public string alt { get; set; }
-        public string mediaId { get; set; }
-        public string mediaApiUrl { get; set; }
-        public string picdarUrn { get; set; }
-        public string suppliersReference { get; set; }
-        public string imageType { get; set; }
-        public string role { get; set; }
-        public string comment { get; set; }
+        public string Caption { get; set; }
+        public string Copyright { get; set; }
+        public string DisplayCredit { get; set; }
+        public string Credit { get; set; }
+        public string Source { get; set; }
+        public string Photographer { get; set; }
+        public string Alt { get; set; }
+        public string MediaId { get; set; }
+        public string NediaApiUrl { get; set; }
+        public string PicdarUrn { get; set; }
+        public string SuppliersReference { get; set; }
+        public string ImageType { get; set; }
+        public string Role { get; set; }
+        public string Comment { get; set; }
     }
 }

@@ -2,15 +2,15 @@
 {
     public class InteractiveTypeData
     {
-        public string originalUrl { get; set; }
-        public string source { get; set; }
-        public string alt { get; set; }
-        public string scriptUrl { get; set; }
-        public string html { get; set; }
-        public string scriptName { get; set; }
-        public string iframUrl { get; set; }
-        public bool isMandatory { get; set; }
-        public string role { get; set; }
-        public string caption { get; set; }
+        public string OriginalUrl { get; set; }
+        public string Source { get; set; }
+        public string Alt { get; set; }
+        public string ScriptUrl { get; set; }
+        public string Html { get; set; }
+        public string ScriptName { get; set; }
+        public string IframeUrl { get; set; }
+        public bool? IsMandatory { get; set; }
+        public string Role { get; set; }
+        public string Caption { get; set; }
     }
 }

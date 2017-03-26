@@ -5,13 +5,12 @@ namespace GuardianApi.Models
 {
     public class Podcast
     {
-        public string linkUrl { get; set; }
-        public string copyright { get; set; }
-        public string author { get; set; }
-        public string subscriptionUrl { get; set; }
-        [JsonProperty("explicit")]
-        public bool explicitContent { get; set; }
-        public string image { get; set; }
-        public List<Category> categories { get; set; }
+        public string LinkUrl { get; set; }
+        public string Copyright { get; set; }
+        public string Author { get; set; }
+        public string SubscriptionUrl { get; set; }
+        public bool? Explicit { get; set; }
+        public string Image { get; set; }
+        public List<Category> Categories { get; set; }
     }
 }

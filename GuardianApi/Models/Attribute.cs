@@ -2,9 +2,9 @@
 {
     public class Attribute
     {
-        public bool keyEvent { get; set; }
-        public string title { get; set; }
-        public bool pinned { get; set; }
-        public bool summary { get; set; }
+        public bool? KeyEvent { get; set; }
+        public string Title { get; set; }
+        public bool? Pinned { get; set; }
+        public bool? Summary { get; set; }
     }
 }

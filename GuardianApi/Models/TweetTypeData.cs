@@ -2,11 +2,11 @@
 {
     public class TweetTypeData
     {
-        public string source { get; set; }
-        public string url { get; set; }
-        public string id { get; set; }
-        public string html { get; set; }
-        public string originalUrl { get; set; }
-        public string role { get; set; }
+        public string Source { get; set; }
+        public string Url { get; set; }
+        public string Id { get; set; }
+        public string Html { get; set; }
+        public string OriginalUrl { get; set; }
+        public string Role { get; set; }
     }
 }

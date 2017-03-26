@@ -4,8 +4,8 @@ namespace GuardianApi.Models
 {
     public class Block
     {
-        public Body main { get; set; }
-        public List<Body> body { get; set; }
-        public int totalBodyBlocks { get; set; }
+        public Body Main { get; set; }
+        public List<Body> Body { get; set; }
+        public int? TotalBodyBlocks { get; set; }
     }
 }

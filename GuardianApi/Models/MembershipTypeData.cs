@@ -4,16 +4,16 @@ namespace GuardianApi.Models
 {
     public class MembershipTypeData
     {
-        public string originalUrl { get; set; }
-        public string linkText { get; set; }
-        public string linkPrefix { get; set; }
-        public string title { get; set; }
-        public string venue { get; set; }
-        public string location { get; set; }
-        public string identifier { get; set; }
-        public string image { get; set; }
-        public string price { get; set; }
-        public DateTime start { get; set; }
-        public DateTime end { get; set; }
+        public string OriginalUrl { get; set; }
+        public string LinkText { get; set; }
+        public string LinkPrefix { get; set; }
+        public string Title { get; set; }
+        public string Venue { get; set; }
+        public string Location { get; set; }
+        public string Identifier { get; set; }
+        public string Image { get; set; }
+        public string Price { get; set; }
+        public DateTime Start { get; set; }
+        public DateTime End { get; set; }
     }
 }
