@@ -11,6 +11,15 @@ namespace GuardianApi.Models.Requests
         Search
     }
 
+    public enum BlockOptions
+    {
+        Main,
+        Body,
+        All,
+        Latest,
+        Oldest,
+    }
+
     public enum UseDateOptions
     {
         Published,
@@ -125,6 +134,15 @@ namespace GuardianApi.Models.Requests
             { QueryType.Edition, "editions" },
             { QueryType.Section, "sections" },
             { QueryType.Search, "search" }
+        };
+
+        internal static readonly Dictionary<BlockOptions, string> BlockStrings = new Dictionary<BlockOptions, string>
+        {
+            { BlockOptions.Main, "main" },
+            { BlockOptions.Body, "body" },
+            { BlockOptions.All, "all" },
+            { BlockOptions.Latest, "body:latest" },
+            { BlockOptions.Oldest, "body:oldest" }
         };
         
         internal static readonly Dictionary<UseDateOptions, string> UseDateStrings = new Dictionary<UseDateOptions, string>

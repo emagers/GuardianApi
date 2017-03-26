@@ -5,20 +5,27 @@ namespace GuardianApi.Models.Requests
     /// <summary>
     /// A container for the tag filter options
     /// </summary>
-    /// <fields>
-    ///     <Type>Filters tags by the given types</Type>
-    ///     <Section>Filters tags in the given sections (supports boolean filtering)</Section>
-    ///     <Reference>Filters tags with the given references (supports boolean filtering)</Reference>
-    ///     <ReferenceType>Filters tags with the given reference types (supports boolean filtering</ReferenceType>
-    ///     <ReferenceInformation>Specifies the additional reference information to be included</ReferenceInformation>
-    ///     <FilterString>String representation of the tag filters in a query parameter format</FilterString>
-    /// </fields>
     public class TagFilter
     {
+        /// <summary>
+        /// Filters tags by the given types
+        /// </summary>
         public List<string> Type { get; set; }
+        /// <summary>
+        /// Filters tags in the given sections (supports boolean filtering)
+        /// </summary>
         public string Section { get; set; }
+        /// <summary>
+        /// Filters tags with the given references (supports boolean filtering)
+        /// </summary>
         public string Reference { get; set; }
+        /// <summary>
+        /// Filters tags with the given reference types (supports boolean filtering
+        /// </summary>
         public string ReferenceType { get; set; }
+        /// <summary>
+        /// Specifies the additional reference information to be included
+        /// </summary>
         public List<ReferenceInformationOptions> ReferenceInformation { get; set; }
         internal string FilterString
         {
