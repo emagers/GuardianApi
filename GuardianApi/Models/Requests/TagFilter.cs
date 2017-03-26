@@ -20,7 +20,7 @@ namespace GuardianApi.Models.Requests
         public string Reference { get; set; }
         public string ReferenceType { get; set; }
         public List<ReferenceInformationOptions> ReferenceInformation { get; set; }
-        public string FilterString
+        internal string FilterString
         {
             get
             {
