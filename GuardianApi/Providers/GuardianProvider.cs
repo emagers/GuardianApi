@@ -18,9 +18,9 @@ namespace GuardianApi.Providers
             _client = client;
         }
 
-        public async Task<ContentSearchResponse> GetContent(string queryString, ContentFilter content, Pagination pagination)
+        public async Task<ContentSearchResponse> GetContent(string queryString, ContentFilter contentFilter, Pagination pagination)
         {
-            string url = string.Empty;
+            string url = $"{Constants.API}/{Constants.QueryStrings[QueryType.Search]}?api-key={_options.ApiKey}&q={queryString}{(contentFilter == null ? string.Empty : contentFilter.ContentFilterString)}{(pagination == null ? string.Empty : pagination.PaginationString)}";
             string response = await GetResponse(url);
 
             return JObject.Parse(response).ToObject<ContentSearchResponse>();
@@ -28,7 +28,7 @@ namespace GuardianApi.Providers
 
         public async Task<ContentResponse> GetContent(string id, ContentFilter contentFilter)
         {
-            string url = string.Empty;
+            string url = $"{Constants.API}/{id}?api-key={_options.ApiKey}{(contentFilter == null ? string.Empty : contentFilter.ContentFilterString)}";
             string response = await GetResponse(url);
 
             return JObject.Parse(response).ToObject<ContentResponse>();

@@ -31,21 +31,23 @@ namespace GuardianApi.Models.Requests
         {
             get
             {
-                List<string> referenceInformation = new List<string>();
-                foreach (ReferenceInformationOptions option in ReferenceInformation)
+                string referenceInformation = "";
+                if (ReferenceInformation != null)
                 {
-                    string value = string.Empty;
-                    if (Constants.ReferenceInformationStrings.TryGetValue(option, out value))
+                    List<string> strings = new List<string>();
+                    foreach (ReferenceInformationOptions option in ReferenceInformation)
                     {
-                        referenceInformation.Add(value);
+                        strings.Add(Constants.ReferenceInformationStrings[option]);
                     }
-                }
 
-                return $"{(Type == null ? string.Empty : "&type=" + string.Join(",", Type))}" +
-                       $"{(string.IsNullOrEmpty(Section) ? string.Empty : "&section=" + Section)}" +
-                       $"{(string.IsNullOrEmpty(Reference) ? string.Empty : "&reference=" + Reference)}" +
-                       $"{(string.IsNullOrEmpty(ReferenceType) ? string.Empty : "&reference-type=" + ReferenceType)}" +
-                       $"{(ReferenceInformation == null ? string.Empty : "&show-references=" + string.Join(",", referenceInformation))}";
+                    referenceInformation = string.Join(",", strings);
+                }
+                
+                return $"{(Type == null ? string.Empty : $"&type={string.Join(", ", Type)}")}" +
+                       $"{(string.IsNullOrEmpty(Section) ? string.Empty : $"&section={Section}")}" +
+                       $"{(string.IsNullOrEmpty(Reference) ? string.Empty : $"&reference={Reference}")}" +
+                       $"{(string.IsNullOrEmpty(ReferenceType) ? string.Empty : $"&reference-type={ReferenceType}")}" +
+                       $"{(string.IsNullOrEmpty(referenceInformation) ? string.Empty : $"&show-references={referenceInformation}")}";
             }
         }
     }

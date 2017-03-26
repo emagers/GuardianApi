@@ -83,15 +83,15 @@ namespace GuardianApi.Models.Requests
         /// <summary>
         /// Changes which type of date is used to filter the results using from-date and to-date
         /// </summary>
-        public UseDateOptions UseDate { get; set; }
+        public UseDateOptions? UseDate { get; set; }
         /// <summary>
         /// Returns results in the specified order
         /// </summary>
-        public OrderByOptions OrderBy { get; set; }
+        public OrderByOptions? OrderBy { get; set; }
         /// <summary>
         /// Changes which type of date is used to order the results
         /// </summary>
-        public OrderDateOptions OrderDate { get; set; }
+        public OrderDateOptions? OrderDate { get; set; }
         /// <summary>
         /// Add fields associated with the content
         /// </summary>
@@ -107,7 +107,7 @@ namespace GuardianApi.Models.Requests
         /// <summary>
         /// Add associated blocks (single block for content, one or more for liveblogs)
         /// </summary>
-        public List<ShowBlockOptions> ShowBlocks { get; set; }
+        public ShowBlockOptions ShowBlocks { get; set; }
         /// <summary>
         /// Add associated media elements such as images and audio
         /// </summary>
@@ -140,8 +140,79 @@ namespace GuardianApi.Models.Requests
         {
             get
             {
+                string showFields = "";
+                if (ShowFields != null)
+                {
+                    List<string> strings = new List<string>();
+                    foreach (var field in ShowFields)
+                    {
+                        strings.Add(Constants.FilterStrings[field]);
+                    }
+
+                    showFields = string.Join(",", strings);
+                }
+
+                string showTags = "";
+                if (ShowTags != null)
+                {
+                    List<string> strings = new List<string>();
+                    foreach (var tag in ShowTags)
+                    {
+                        strings.Add(Constants.TagStrings[tag]);
+                    }
+
+                    showTags = string.Join(",", strings);
+                }
+
+                string showElements = "";
+                if (ShowElements != null)
+                {
+                    List<string> strings = new List<string>();
+                    foreach (var element in ShowElements)
+                    {
+                        strings.Add(Constants.ShowElementStrings[element]);
+                    }
+
+                    showElements = string.Join(",", strings);
+                }
+
+                string referenceInformation = "";
+                if (ReferenceInformation != null)
+                {
+                    List<string> strings = new List<string>();
+                    foreach (var reference in ReferenceInformation)
+                    {
+                        strings.Add(Constants.ReferenceInformationStrings[reference]);
+                    }
+
+                    referenceInformation = string.Join(",", strings);
+                }
+
+                string showRights = "";
+                if (ShowRights != null)
+                {
+                    List<string> strings = new List<string>();
+                    foreach (var right in ShowRights)
+                    {
+                        strings.Add(Constants.RightStrings[right]);
+                    }
+
+                    showRights = string.Join(",", strings);
+                }
+
                 return $"{(Filters == null ? "" : Filters.FilterString)}" +
+                       $"{(ToDate == null ? "" : $"&to-date={ToDate}")}" +
+                       $"{(FromDate == null ? "" : $"&from-date={FromDate}")}" +
+                       $"{(UseDate == null ? "" : $"&use-date={UseDate}")}" +
+                       $"{(OrderBy == null ? "" : $"&order-by={OrderBy}")}" +
+                       $"{(OrderDate == null ? "" : $"&order-date={OrderDate}")}" +
+                       $"{(string.IsNullOrEmpty(showFields) ? "" : $"&show-fields={showFields}")}" +
+                       $"{(string.IsNullOrEmpty(showTags) ? "" : $"&show-tags={showTags}")}" +
                        $"{(ShowSection == null ? "" : $"&show-section={ShowSection.Value}")}" +
+                       $"{(string.IsNullOrEmpty(showElements) ? "" : $"&show-elements={showElements}")}" +
+                       $"{(string.IsNullOrEmpty(referenceInformation) ? "" : $"&show-references={referenceInformation}")}" +
+                       $"{(string.IsNullOrEmpty(showRights) ? "" : $"&show-rights={showRights}")}" +
+                       $"{(ShowBlocks == null ? "" : ShowBlocks.ShowBlockString)}" +
                        $"{(ShowStoryPackage == null ? "" : $"&show-story-package={ShowStoryPackage.Value}")}" +
                        $"{(ShowEditorPicks == null ? "" : $"&show-editor-picks={ShowEditorPicks.Value}")}" +
                        $"{(ShowMostViewed == null ? "" : $"&show-most-viewed={ShowMostViewed.Value}")}" +
