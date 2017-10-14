@@ -1,0 +1,12 @@
+C:\Users\Eric\Desktop\API Libraries\GuardianApi\GuardianApiTest\bin\Debug\netcoreapp1.1\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
+C:\Users\Eric\Desktop\API Libraries\GuardianApi\GuardianApiTest\bin\Debug\netcoreapp1.1\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
+C:\Users\Eric\Desktop\API Libraries\GuardianApi\GuardianApiTest\bin\Debug\netcoreapp1.1\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
+C:\Users\Eric\Desktop\API Libraries\GuardianApi\GuardianApiTest\bin\Debug\netcoreapp1.1\GuardianApiTest.deps.json
+C:\Users\Eric\Desktop\API Libraries\GuardianApi\GuardianApiTest\bin\Debug\netcoreapp1.1\GuardianApiTest.runtimeconfig.json
+C:\Users\Eric\Desktop\API Libraries\GuardianApi\GuardianApiTest\bin\Debug\netcoreapp1.1\GuardianApiTest.runtimeconfig.dev.json
+C:\Users\Eric\Desktop\API Libraries\GuardianApi\GuardianApiTest\bin\Debug\netcoreapp1.1\GuardianApiTest.dll
+C:\Users\Eric\Desktop\API Libraries\GuardianApi\GuardianApiTest\bin\Debug\netcoreapp1.1\GuardianApiTest.pdb
+C:\Users\Eric\Desktop\API Libraries\GuardianApi\GuardianApiTest\obj\Debug\netcoreapp1.1\GuardianApiTest.csprojResolveAssemblyReference.cache
+C:\Users\Eric\Desktop\API Libraries\GuardianApi\GuardianApiTest\obj\Debug\netcoreapp1.1\GuardianApiTest.AssemblyInfo.cs
+C:\Users\Eric\Desktop\API Libraries\GuardianApi\GuardianApiTest\obj\Debug\netcoreapp1.1\GuardianApiTest.dll
+C:\Users\Eric\Desktop\API Libraries\GuardianApi\GuardianApiTest\obj\Debug\netcoreapp1.1\GuardianApiTest.pdb

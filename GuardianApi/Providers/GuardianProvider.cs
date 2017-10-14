@@ -65,7 +65,6 @@ namespace GuardianApi.Providers
             using (HttpResponseMessage response = await _client.GetAsync(url))
             {
                 response.EnsureSuccessStatusCode();
-
                 responseContent = await response.Content.ReadAsStringAsync();
             }
 
