@@ -2,6 +2,13 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
+    <Authors>Eric Magers</Authors>
+    <Description>A wrapper for the Guardian News APIs.</Description>
+    <PackageProjectUrl>https://github.com/emagers/GuardianApi</PackageProjectUrl>
+    <PackageLicenseUrl>https://github.com/emagers/GuardianApi/blob/master/LICENSE.md</PackageLicenseUrl>
+    <Copyright>Eric Magers</Copyright>
+    <RepositoryUrl>https://github.com/emagers/GuardianApi</RepositoryUrl>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
   </PropertyGroup>
 
   <ItemGroup>
