@@ -1,13 +1,11 @@
-using System;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
 using GuardianApi.Models.Requests;
+using Xunit;
 
 namespace GuardianApiTest
 {
-    [TestClass]
     public class ProviderTest
     {
-        [TestMethod]
+        [Fact]
         public void TestMethod1()
         {
             ContentFilter filter = new ContentFilter();
