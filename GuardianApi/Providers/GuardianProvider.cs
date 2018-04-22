@@ -12,16 +12,17 @@ namespace GuardianApi.Providers
     public class GuardianProvider : IGuardianProvider
     {
         private readonly HttpClient _client;
-        private GuardianOptions _options;
+        private readonly GuardianOptions _options;
         
         /// <summary>
         /// Creates a new GuardianProvider object. 
         /// </summary>
-        /// <param name="options">The configuration object for the Guardian API.</param>
-        public GuardianProvider(GuardianOptions options)
+        /// <param name="client">The HTTP client to be used for all calls.</param>
+        /// <param name="options">The Guardian API configuration object.</param>
+        public GuardianProvider(HttpClient client, GuardianOptions options)
         {
             _options = options;
-            _client = new HttpClient();
+            _client = client;
         }
 
         /// <summary>
@@ -33,10 +34,7 @@ namespace GuardianApi.Providers
         /// <returns>A ContentSearchResponse object which contains a list of filtered content.</returns>
         public async Task<ContentSearchResponse> GetContent(string queryString, ContentFilter contentFilter, Pagination pagination)
         {
-            string url = $"{Constants.API}/{Constants.QueryStrings[QueryType.Search]}?api-key={_options.ApiKey}&q={queryString}{(contentFilter == null ? string.Empty : contentFilter.ContentFilterString)}{(pagination == null ? string.Empty : pagination.PaginationString)}";
-            string response = await GetResponse(url);
-
-            return JObject.Parse(response).ToObject<ContentSearchResponse>();
+            return JObject.Parse(await GetContent(queryString, contentFilter, pagination, "json")).ToObject<ContentSearchResponse>();
         }
 
         /// <summary>
@@ -65,10 +63,7 @@ namespace GuardianApi.Providers
         /// <returns>A ContentResponse object which contains the requested content.</returns>
         public async Task<ContentResponse> GetContent(string id, ContentFilter contentFilter)
         {
-            string url = $"{Constants.API}/{id}?api-key={_options.ApiKey}{(contentFilter == null ? string.Empty : contentFilter.ContentFilterString)}";
-            string response = await GetResponse(url);
-
-            return JObject.Parse(response).ToObject<ContentResponse>();
+            return JObject.Parse(await GetContent(id, contentFilter, "json")).ToObject<ContentResponse>();
         }
 
         /// <summary>
@@ -95,10 +90,7 @@ namespace GuardianApi.Providers
         /// <returns>An EditionResponse object which contains all matching editions.</returns>
         public async Task<EditionResponse> GetEditions(string queryString)
         {
-            string url = $"{Constants.API}/{Constants.QueryStrings[QueryType.Edition]}?api-key={_options.ApiKey}&q={queryString}";
-            string response = await GetResponse(url);
-
-            return JObject.Parse(response).ToObject<EditionResponse>();
+            return JObject.Parse(await GetEditions(queryString, "json")).ToObject<EditionResponse>();
         }
 
         /// <summary>
@@ -124,10 +116,7 @@ namespace GuardianApi.Providers
         /// <returns>Returns a SectionResponse object which contains a list of matching sections.</returns>
         public async Task<SectionResponse> GetSections(string queryString)
         {
-            string url = $"{Constants.API}/{Constants.QueryStrings[QueryType.Section]}?api-key={_options.ApiKey}&q={queryString}";
-            string response = await GetResponse(url);
-
-            return JObject.Parse(response).ToObject<SectionResponse>();
+            return JObject.Parse(await GetSections(queryString, "json")).ToObject<SectionResponse>();
         }
 
         /// <summary>
@@ -155,10 +144,7 @@ namespace GuardianApi.Providers
         /// <returns>A TagResponse object containing a list of all matching tags.</returns>
         public async Task<TagResponse> GetTags(string queryString, TagFilter filter, Pagination pagination)
         {
-            string url = $"{Constants.API}/{Constants.QueryStrings[QueryType.Tag]}?api-key={_options.ApiKey}&q={queryString}{(filter == null ? string.Empty : filter.FilterString)}{(pagination == null ? string.Empty : pagination.PaginationString)}";
-            string response = await GetResponse(url);
-
-            return JObject.Parse(response).ToObject<TagResponse>();
+            return JObject.Parse(await GetTags(queryString, filter, pagination, "json")).ToObject<TagResponse>();
         }
 
         /// <summary>
