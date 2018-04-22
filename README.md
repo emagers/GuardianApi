@@ -1,14 +1,21 @@
-﻿Guardian News API
+﻿#GuardianApi
+
+A wrapper for the Guardian News Api. http://open-platform.theguardian.com/documentation/
 
 The Guardian provides 5 different APIs:
 
-	Content
-	Tags
-	Sections
-	Editions
-	Single item
+* Content
+* Tags
+* Sections
+* Editions
+* Single item
 
 Each API returns a dataset which is customizable through query parameters.
+
+This library provides easy access to each of these APIs and deserializes the responses into POCO classes for ease of use. There are a number of request classes available which help make full use of the robust Guardian APIs.
+
+An example of an API call:
+
 
 ####Content####
 

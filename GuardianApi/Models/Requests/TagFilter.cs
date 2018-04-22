@@ -20,7 +20,7 @@ namespace GuardianApi.Models.Requests
         /// </summary>
         public string Reference { get; set; }
         /// <summary>
-        /// Filters tags with the given reference types (supports boolean filtering
+        /// Filters tags with the given reference types (supports boolean filtering)
         /// </summary>
         public string ReferenceType { get; set; }
         /// <summary>
